@@ -1,5 +1,6 @@
 /**
  * A generation in the {@link GameOfLife.World}.
+ * Sets what each cell's state (alive or dead).
  */
 package GameOfLife;
 
@@ -23,7 +24,7 @@ public class Generation {
         this.size = size;
         this.cells = new boolean[this.size][this.size];
 
-        // Initialize cells' state to be alive or dead using random:
+        // Initialize cells' state to be alive or dead randomly:
         Random random = new Random();
         for(int i = 0; i < this.size; i++) {
             for(int j = 0; j < this.size; j++) {
@@ -53,12 +54,12 @@ public class Generation {
     }
 
     /**
-     * @return The nember of alive cells in this Generation.
+     * @return The number of alive cells in this Generation.
      */
     public int numberOfAliveCells() {
         int counter = 0;
-        for(int i = 0; i<this.size; i++) {
-            for(int j = 0; j<this.size; j++) {
+        for(int i = 0; i < this.size; i++) {
+            for(int j = 0; j < this.size; j++) {
                 if(this.isAlive(i,j)) {
                     counter++;
                 }
@@ -147,9 +148,9 @@ public class Generation {
 
         int neighborRow = this.decreaseCoordinate(row);
         int neighborColStart = this.decreaseCoordinate(col);
-        for(int i =0; i <3; i++){
+        for(int i = 0; i < 3; i++){
             int neighborCol = neighborColStart;
-            for(int j=0; j<3;j++) {
+            for(int j = 0; j < 3;j++) {
                 if(this.isAlive(neighborRow, neighborCol)) {
                     counter++;
                 }
