@@ -40,7 +40,7 @@ public class GameOfLife {
     private static void runTheWorld(World world, Window window) {
         for(int i = 1; i <= world.getMaxGeneration(); i++) {
             world.updateGeneration();
-                window.updateWindow(world.getNumberOfAliveCells(), world.currentGeneration);
+            window.updateWindow(world.getNumberOfAliveCells(), world.currentGeneration);
         }
     }
 }
