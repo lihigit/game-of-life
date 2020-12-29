@@ -34,7 +34,7 @@ public class GameOfLife {
 
     /**
      * Run the Game of Life.
-     * @param world
+     * @param world    The model
      * @param window   The display
      */
     private static void runTheWorld(World world, Window window) {
