@@ -34,8 +34,8 @@ public class GameOfLife {
 
     /**
      * Run the Game of Life.
-     * @param world    The model
-     * @param window   The display
+     * @param world    {@link GameOfLife.World}
+     * @param window   {@link GameOfLife.Display.Window}
      */
     private static void runTheWorld(World world, Window window) {
         for(int i = 1; i <= world.getMaxGeneration(); i++) {
